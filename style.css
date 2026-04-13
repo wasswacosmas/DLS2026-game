@@ -1,0 +1,95 @@
+:root {
+    --accent: #00ff88;
+    --bg-dark: #0b0e14;
+    --card-bg: #1c2128;
+    --text: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: #161b22;
+    border-bottom: 2px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--accent); }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover { color: var(--accent); }
+
+/* Hero & Video */
+.hero { padding: 40px 5%; text-align: center; background: linear-gradient(to bottom, #161b22, #0b0e14); }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    max-width: 900px;
+    margin: 20px auto;
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* Grid System */
+.container { padding: 50px 5%; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--accent);
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+/* Table Styling */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; background: var(--card-bg); }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #30363d; }
+th { color: var(--accent); text-transform: uppercase; }
+
+/* Buttons */
+.btn {
+    background: var(--accent);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer { text-align: center; padding: 30px; opacity: 0.5; font-size: 0.8rem; }
